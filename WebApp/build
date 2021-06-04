@@ -1,0 +1,4 @@
+#!/bin/bash
+
+GOOS=js GOARCH=wasm go build -o www/main.wasm main.go
+echo built

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# sudo apt install inotify-tools
+
+inotifywait -q -m -e close_write *.go |
+while read events; do
+  sleep 3
+  ./build
+done
